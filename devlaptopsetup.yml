@@ -15,8 +15,23 @@
       name: ubuntu-desktop
       state: latest
       install_recommends: no
-  - name: Set run level to multi user terminal
+  - name: Change grub text line
     become: true
-    shell: echo ':id:3:initdefault:' >> /etc/inittab
+    lineinfile:
+      path: /etc/default/grub
+      regexp: '^GRUB_CMDLINE_LINUX_DEFAULT='
+      line: 'GRUB_CMDLINE_LINUX_DEFAULT="text"'
+  - name: Change grub console line
+    become: true
+    lineinfile:
+      path: /etc/default/grub
+      regexp: '^GRUB_CMDLINE_LINUX='
+      line: 'GRUB_CMDLINE_LINUX=console'
+  - name: run update grub command
+    become: true
+    command: update-grub
+  - name: run systemctl command
+    become: true
+    command: 'systemctl set-default multi-user.target'
 
 
