@@ -9,3 +9,11 @@
       name: mono-complete
       state: present
       update_cache: true
+  - name: Install basic gnome desktop
+    become: true
+    apt:
+      name: ubuntu-desktop
+      state: latest
+      install_recomends: no
+      
+
