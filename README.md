@@ -7,7 +7,8 @@ Follow the following steps to setup a new developer laptop on a fresh Ubuntu 18.
 3. cd into the newly cloned repo
 4. setup devlaptop for passwordless sudo
 
-```sudo nano /etc/sudoers
+```
+sudo nano /etc/sudoers
 add this to the bottom of the file
 user ALL=(ALL) NOPASSWD: ALL
 ```
