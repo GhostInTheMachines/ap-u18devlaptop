@@ -15,5 +15,8 @@
       name: ubuntu-desktop
       state: latest
       install_recommends: no
+  - name: Set run level to multi user terminal
+    become: true
+    shell: echo ':id:3:initdefault:' >> /etc/inittab
 
 
