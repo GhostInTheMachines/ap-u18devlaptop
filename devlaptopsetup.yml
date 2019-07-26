@@ -1,0 +1,11 @@
+# file devlaptopsetup.yml
+# use this ansible playbook to setup a new development laptop
+---
+- hosts: all
+  tasks:
+  - name: Install mono-complete
+    become: true
+    apt:
+      name: mono-complete
+      state: present
+      update_cache: true
