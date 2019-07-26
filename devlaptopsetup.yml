@@ -9,7 +9,7 @@
       name: mono-complete
       state: present
       update_cache: true
-  - name: Install basic gnome desktop
+  - name: Install basic ubuntu desktop
     become: true
     apt:
       name: ubuntu-desktop
