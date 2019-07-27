@@ -34,6 +34,7 @@
     become: true
     command: 'systemctl set-default multi-user.target'
   - name: Install support packages for Docker
+    become: true
     apt:
       name: "{{ packages }}"
     vars:
