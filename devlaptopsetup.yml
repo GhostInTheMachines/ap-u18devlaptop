@@ -34,9 +34,11 @@
     become: true
     command: 'systemctl set-default multi-user.target'
   - name: Install support packages for Docker
-    become: true
     apt:
       name: "{{ packages }}"
+      update_cache: yes
+      cache_valid_time: 3600
+      become: true
     vars:
       packages:
       - apt-transport-https
