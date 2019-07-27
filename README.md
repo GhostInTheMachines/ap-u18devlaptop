@@ -15,3 +15,4 @@ user ALL=(ALL) NOPASSWD: ALL
 5. edit username: in host_vars/localhost.yml to match your username
 6. Run playbook on local machine
 ```ansible-playbook -i 'localhost,' -c local devlaptopsetup.yml```
+7. Log out of newly provisioned laptop and then log back in
