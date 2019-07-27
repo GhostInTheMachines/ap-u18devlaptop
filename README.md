@@ -12,5 +12,6 @@ sudo nano /etc/sudoers
 add this to the bottom of the file
 user ALL=(ALL) NOPASSWD: ALL
 ```
-5. Run playbook on local machine
+5. edit username: in host_vars/localhost.yml to match your username
+6. Run playbook on local machine
 ```ansible-playbook -i 'localhost,' -c local devlaptopsetup.yml```
