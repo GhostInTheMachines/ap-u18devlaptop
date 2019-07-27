@@ -60,4 +60,11 @@
     become: true
     shell: curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+    - name: create the docker group
+      group: name=docker
+             state=present
 
+    - name: add user to docker group
+      user: name={{ username }}
+            groups=docker
+            append=yes
