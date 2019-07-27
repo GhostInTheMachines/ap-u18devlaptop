@@ -33,9 +33,10 @@
   - name: run systemctl command
     become: true
     command: 'systemctl set-default multi-user.target'
-    
+
   - name: Add Docker GPG key
     apt_key: url=https://download.docker.com/linux/ubuntu/gpg
+    become: true
 
   - name: Install basic list of packages
     apt:
