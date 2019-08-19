@@ -2,7 +2,14 @@
 
 Follow the following steps to setup a new developer laptop on a fresh Ubuntu 18.04 bionic server image.
 
-1. Install git and Ansible on dev laptop
+1. Install git
+2. Install Ansible
+```
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+```
 2. Clone this repository to dev laptop
 3. cd into the newly cloned repo
 4. setup devlaptop for passwordless sudo
