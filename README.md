@@ -5,7 +5,7 @@ Follow the following steps to setup a new developer laptop on a fresh Ubuntu 18.
 1. Install git
 2. Install Ansible
 ```
-sudo apt-get install software-properties-common
+sudo apt-get install software-properties-common \
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible
