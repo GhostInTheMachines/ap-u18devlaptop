@@ -10,7 +10,7 @@ sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible
 ```
-3. Clone this repository to dev laptop
+3. Clone this repository to dev laptop ```git clone https://github.com/GhostInTheMachines/ap-u18devlaptop```
 4. cd into the newly cloned repo
 5. setup devlaptop for passwordless sudo
 
