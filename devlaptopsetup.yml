@@ -70,3 +70,15 @@
     user: name={{ username }}
           groups=docker
           append=yes
+
+  # Add repo and driver for System76 laptop
+  - name: add repo for System76
+    apt_repository:
+      repo: ppa:system76-dev/stable
+
+  - name: Install System76 driver
+    become: true
+    apt:
+      name: system76-driver
+      state: present
+      update_cache: true
