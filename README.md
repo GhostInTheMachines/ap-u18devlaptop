@@ -2,7 +2,7 @@
 
 Follow the following steps to setup a new developer laptop on a fresh Ubuntu 18.04 bionic server image.
 
-1. Install git
+1. Update and upgrade OS ```sudo apt-get update && apt-get upgrade -y```
 2. Install Ansible
 ```
 sudo apt-get install software-properties-common \
