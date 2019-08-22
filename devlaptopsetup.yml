@@ -73,6 +73,7 @@
 
   # Add repo and driver for System76 laptop
   - name: add repo for System76
+    become: true
     apt_repository:
       repo: ppa:system76-dev/stable
 
